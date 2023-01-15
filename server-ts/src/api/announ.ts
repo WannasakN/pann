@@ -1,9 +1,9 @@
 import Router from "koa-router"
 const router = new Router()
-router.get('/anoun', async ctx =>{
+router.get('/announ', async ctx =>{
     ctx.body= [
-        {id: 1,topic: '240-124 Midterm 2/2565', descrition: 'คะแนนสอบกลางภาควิชา Web Designer and Developer Module',
-    datetime: '2023-01-20 10:00:00', userC: 'Wannasak.psu'}
+        { id: 1, topic: '240-124 Midterm 1/2566', description: 'คะแนนกลางภาควิชา Web Dev', pubDateTime: '2022-09-08 10:00:00', userCode: 'suthon.s'},
+        { id: 2, topic: 'ทุนเรียนดีประจำปี 2566', description: 'test', remarkIfPositive: 'ขอแสดงความยินดีกับผุ้ได้รับทุนเรียนดีทุกคนด้วย', pubDateTime: '2022-09-09 15:00:00', userCode: 'suthon.s'}
     ]
 })
 
