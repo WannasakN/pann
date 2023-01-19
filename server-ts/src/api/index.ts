@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import announ from './announ'
+import announ from './announcement'
 import userResult from './user_result'
 
 const apiRouter = new Router()

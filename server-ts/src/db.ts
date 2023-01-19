@@ -8,3 +8,5 @@ const db = Knex(knexStringCase({
     connection: appConfig.dbconnectinfo,
     useNullAsDefalult: true
 }))
+
+export default db
