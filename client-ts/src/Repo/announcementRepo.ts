@@ -19,8 +19,8 @@ export class announcementRepo implements IRepository<Announcement> {
             { id: 1, 
         topic: '240-124 Midterm 1/2566',
         description: 'คะแนนกลางภาควิชา Web Dev',
-        remarkIfPositive:'1',
-        remarkIfNegative:'0',
+        remarkIfPositive:'0',
+        remarkIfNegative:'1',
         pubDateTime:new Date('2022-09-08 10:00:00'), 
         userCode: 'suthon.s'}
         ]

@@ -1,19 +1,30 @@
 import Repo from "./Repo";
 import { useEffect,useState } from "react";
 import Announcement from "./model/Announcement";
+import UserResult from "./model/UserReult";
 
 function App() {
   const [announcementL, setAnnouncementL] = useState<Announcement[]>([])
-
-  const fetchannouncementL = async () => {
+  const [userResultL, setuserResultL] = useState<UserResult[]>([])
+  
+  const fetchannouncementL = async () => {  
     const result = await Repo.announcements.getAll()
     if(result){
       setAnnouncementL(result)
     }
   }
 
+  const fetchUserResultL = async () => {  
+    const result = await Repo.userResult.getAll()
+    if(result){
+      setuserResultL(result)
+    }
+  }
+
   useEffect(() => {
     fetchannouncementL()
+    fetchUserResultL()
+
   })
   return(
     <div>
@@ -34,6 +45,18 @@ function App() {
           <p>UserCode : {announcement.userCode}</p>
         </div>
       ))}
+      <hr />
+      <div>
+        {userResultL.map(userResult => (
+          <div key={userResult.id}>
+            <p>ID : {userResult.id}</p>
+            <p>Topic : {userResult.announcement.topic}</p>
+            <p>Result : {userResult.result}</p>
+            <p>UserCode : {userResult.userCode}</p>
+          </div>
+        ))}
+      </div>
+
     </div>
   )
 }

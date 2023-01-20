@@ -15,7 +15,7 @@ export class userResultRepo implements IRepository<UserResult> {
     delete(id: string | number): Promise<void> {
         throw new Error("Method not implemented.");
     }
-    async getAll(filter: any): Promise<UserResult[] | null> {
+    async getAll(): Promise<UserResult[] | null> {
         return [
             {id: 1,
             announcement: {
