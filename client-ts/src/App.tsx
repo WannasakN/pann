@@ -1,7 +1,7 @@
 import Repo from "./Repo";
 import { useEffect,useState } from "react";
 import Announcement from "./model/Announcement";
-import UserResult from "./model/UserReult";
+import UserResult from "./model/UserResult";
 
 function App() {
   const [announcementL, setAnnouncementL] = useState<Announcement[]>([])

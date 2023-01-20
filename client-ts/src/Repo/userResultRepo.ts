@@ -1,5 +1,5 @@
 
-import UserResult from "../model/UserReult";
+import UserResult from "../model/UserResult";
 import { IRepository } from "./IRepository";
 
 export class userResultRepo implements IRepository<UserResult> {
@@ -27,7 +27,7 @@ export class userResultRepo implements IRepository<UserResult> {
                 pubDateTime:new Date('2022-09-08 10:00:00'), 
                 userCode: 'suthon.s'},
             result: 'ไม่ได้รับทุน',
-            resultType: 2,
+            resultType: -1,
             remark: '',
             isPinned: false,
             viewDateTime: new Date('2022-09-08 15:00:00'),
