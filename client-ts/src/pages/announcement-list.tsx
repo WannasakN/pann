@@ -3,9 +3,9 @@ import { Button, Dialog, DialogTitle, Grid, IconButton, TextField, Typography } 
 import { Box } from "@mui/system";
 import { Add, Close } from '@mui/icons-material/';
 import { useAuth } from "react-oidc-context";
-import AnnouncementCard from "../components/announcement-card";
-import PannAppBar from "../components/pann-app-bar";
-import AnnouncementForm from "../components/announcement-form";
+import AnnouncementCard from "../component/announcement-card";
+import PannAppBar from "../component/pann-app-bar";
+import AnnouncementForm from "../component/announcement-form";
 import Announcement from "../model/Announcement";
 import Repo from "../Repo";
 
