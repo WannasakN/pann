@@ -7,7 +7,7 @@ export interface AnnouncementFilter {
   keyword?: string
 }
 
-export class AnnouncementRepository implements IRepository<Announcement> {
+export class AnnouncementRepo implements IRepository<Announcement> {
   urlPrefix = config.remoteRepositoryUrlPrefix
   
   async getAll(filter: AnnouncementFilter): Promise<Announcement[] | null> {
