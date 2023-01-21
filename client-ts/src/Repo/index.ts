@@ -1,8 +1,8 @@
-import { announcementRepo } from "./announcementRepo";
+import { AnnouncementRepo } from "./announcementRepo";
 import { userResultRepo } from "./userResultRepo";
 
 const Repo = {
-    announcements: new announcementRepo(),
+    announcements: new AnnouncementRepo(),
     userResult: new userResultRepo()
 }
 
