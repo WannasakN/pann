@@ -1,10 +1,10 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { Grid, MenuItem, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import UserResultCard from '../components/user-result-card';
+import UserResultCard from '../component/user-result-card';
 import UserResult from '../model/UserResult';
 import Repo from '../Repo';
-import PannAppBar from '../components/pann-app-bar';
+import PannAppBar from '../component/pann-app-bar';
 
 function UserResultList() {
   const [userResultList, setUserResultList] = useState<UserResult[]>([])
