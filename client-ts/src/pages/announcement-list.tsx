@@ -5,8 +5,9 @@ import { Add, Close } from '@mui/icons-material/';
 import { useAuth } from "react-oidc-context";
 import AnnouncementCard from "../components/announcement-card";
 import PannAppBar from "../components/pann-app-bar";
+import AnnouncementForm from "../components/announcement-form";
 import Announcement from "../model/Announcement";
-import Repo from '../Repo'
+import Repo from "../Repo";
 
 function AnnouncementList() {
   const auth = useAuth();
@@ -72,6 +73,7 @@ function AnnouncementList() {
             <Close />
           </IconButton>
         </DialogTitle>
+        <AnnouncementForm announcement={{}} callbackFn={onCreateAnnouncement}></AnnouncementForm>
       </Dialog>
     </Box>
   );
