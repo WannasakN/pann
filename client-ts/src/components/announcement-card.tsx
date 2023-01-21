@@ -7,6 +7,7 @@ import { cloneDeep, find, isEqual, pick, assign } from 'lodash';
 import Announcement from "../model/Announcement";
 import Repo from "../Repo";
 import UserResult from "../model/UserResult";
+import AnnouncementForm from "./announcement-form";
 
 interface Prop {
   announcement: Announcement
@@ -157,6 +158,9 @@ function AnnouncementCard(props: Prop) {
             <Close />
           </IconButton>
         </DialogTitle>
+        <Box hidden={tabIndex !== 0}>
+          <AnnouncementForm announcement={announcement} callbackFn={onUpdate}></AnnouncementForm>
+        </Box>
         <Box hidden={tabIndex !== 1}>
           <Button variant="contained" component="label" sx={{ mx: 2 }}>
             <Upload />
