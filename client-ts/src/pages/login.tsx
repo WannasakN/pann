@@ -6,6 +6,7 @@ import { useAuth } from "react-oidc-context";
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAppCtx } from '../AppProvider';
 import './bg.css'
+import './login.css'
 
 function Login() {
 
@@ -58,12 +59,15 @@ function Login() {
   }
 
   return (
+    <div className='logo-container'>
+      <img src={require("../image/PSU-logo.png")} alt="Logo" width={40} height={40} /> 
     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 1200 }}>
       <Button variant='contained' sx={{ fontSize: 'large' }} onClick={() => void auth.signinRedirect()}>
         <LoginIcon sx={{ mr: 1 }} />
         Log in
       </Button>
     </Box>
+    </div>
   );
 };
 
