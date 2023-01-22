@@ -5,7 +5,7 @@ import { authMiddleware } from '../auth'
 
 const apiRouter = new Router()
 
-apiRouter.use('/api/announ',authMiddleware,announ.routes())
+apiRouter.use('/api/announcement',authMiddleware,announ.routes())
 apiRouter.use('/api/userResult',authMiddleware,userResult.routes())
 
 export default apiRouter
