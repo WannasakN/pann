@@ -1,9 +1,9 @@
 import { AnnouncementRepo } from "./announcementRepo";
-import { userResultRepo } from "./userResultRepo";
+import { UserResultRepo } from "./userResultRepo";
 
 const Repo = {
     announcements: new AnnouncementRepo(),
-    userResult: new userResultRepo()
+    userResult: new UserResultRepo()
 }
 
 export default Repo

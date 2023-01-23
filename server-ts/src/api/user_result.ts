@@ -1,7 +1,7 @@
 import Router from "koa-router"
 import db from '../db'
 import { nestObject } from "./utils"
-import { AuthData } from "../auth"
+import { AuthData } from "auth"
 const router = new Router()
 
 const makeQuery = () => db('userResult').select(
@@ -12,7 +12,7 @@ const makeQuery = () => db('userResult').select(
     'announcement.remarkIfNegative as announcementRemarkIfNegative',
     'announcement.pubDateTime as announcementPubDateTime'
   ).leftJoin('announcement', 'userResult.announcementId', 'announcement.id')
-  const findById = (id: number) => makeQuery().where({ 'userResult.id': id })
+  const findById = (id: number) => makeQuery().where({ 'userResult.id':id })
   
   const updateUserResult = (id: number, userCode: string, data: any) => {
     return db('userResult').where({ id, userCode }).update(data)
