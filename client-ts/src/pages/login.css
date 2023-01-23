@@ -2,7 +2,7 @@
     background-image: url('../image/PSU-logo.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
