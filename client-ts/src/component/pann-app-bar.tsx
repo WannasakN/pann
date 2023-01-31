@@ -39,7 +39,7 @@ function PannAppBar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton onClick={() => navigate('/announcement')}>
+            <ListItemButton onClick={() => navigate('/announcement')} disabled={!userInfo.staff}>
               <ListItemIcon>
                 <Campaign />
               </ListItemIcon>
